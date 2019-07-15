@@ -39,13 +39,8 @@
           />
         </li>
         <li>
-          <label for="password-confirm">密碼確定</label>
-          <input
-            id="password-confirm"
-            type="password"
-            class="k-textbox"
-            style="width: 100%;"
-          />
+            <label for="daterangepicker">大學就讀期間</label>
+          <div id="daterangepicker" title="daterangepicker"></div>
         </li>
         <li>
           <section style="display: flex">
@@ -69,10 +64,18 @@
           />
         </li>
         <li>
-          <label for="address-city" >城市</label>
-          <input id="address-city" style="width: 100%;"/>
-          <label for="address-unit">鄉鎮</label>
-          <input id="address-unit" style="width: 100%;"/>
+          <div style="display: inline-flex">
+            <div style="width: 50%">
+                <label for="address-city" >城市</label>
+                <input id="address-city" />
+            </div>
+
+            <div style="width: 50%; margin-left: 5px;">
+              <label for="address-unit">鄉鎮</label>
+              <input id="address-unit" />
+            </div>
+           
+          </div>
           <label for="address-other">地址</label>
           <input id="address-other" class="k-textbox" style="width: 100%;" />
         </li>

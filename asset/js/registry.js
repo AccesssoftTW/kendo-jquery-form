@@ -37,4 +37,8 @@ $(document).ready(function() {
   $("#cancel-button").kendoButton({
     icon: "cancel"
   });
+  $("#daterangepicker").kendoDateRangePicker({
+    labels: false,
+    format: "yyyy/MM/dd"
+  });
 });
