@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var city = [
     { text: "台北", parentId: 1 },
     { text: "台中", parentId: 2 },
@@ -31,14 +31,47 @@ $(document).ready(function() {
     mask: "00-0000-0000"
   });
   $("#datepicker").kendoDatePicker();
-  $("#confirm-button").kendoButton({
-    icon: "ungroup"
-  });
+  // $("#confirm-button").kendoButton({
+  //   icon: "check"
+  // });
   $("#cancel-button").kendoButton({
-    icon: "cancel"
+    icon: "close"
   });
   $("#daterangepicker").kendoDateRangePicker({
     labels: false,
     format: "yyyy/MM/dd"
   });
+  $("#notification-switch").kendoSwitch();
+  $("#intrest").kendoDropDownTree({
+    placeholder: "Select ...",
+    height: "auto",
+    dataSource: [
+      {
+        text: "大學", expanded: true, items: [
+          { text: "四技" },
+          { text: "二專" },
+        ]
+      },
+      {
+        text: "高中", items: [
+          { text: "一般高中" },
+          { text: "高職" },
+        ]
+      }
+    ]
+  });
+
+  $("#files").kendoUpload();
+
+  var staticNotification = $("#staticNotification").kendoNotification({
+    appendTo: "#appendto"
+  }).data("kendoNotification");
+
+  $("#showStaticNotification").click(function () {
+    var d = new Date();
+    staticNotification.show("成功", "success");
+    var container = $(staticNotification.options.appendTo);
+    container.scrollTop(container[0].scrollHeight);
+  });
+
 });
