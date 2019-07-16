@@ -1,100 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="./asset/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="./asset/css/kendo.default-v2.min.css" />
+    <link rel="stylesheet" href="./asset/css/register.css" />
+    <script src="./asset/js/jquery.min.js"></script>
+    <script src="./asset/js/kendo.all.min.js"></script>
+    <script src="./asset/js/registry.js"></script>
+    <title>Kendo Practice</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="./asset/css/kendo.common.min.css" />
-  <link rel="stylesheet" href="./asset/css/kendo.default-v2.min.css" />
-  <link rel="stylesheet" href="./asset/css/register.css" />
-  <script src="./asset/js/jquery.min.js"></script>
-  <script src="./asset/js/kendo.all.min.js"></script>
-  <script src="./asset/js/registry.js"></script>
-  <title>Kendo Practice</title>
-</head>
-
-<body>
-  <div class="form-section">
-    <ul class="fieldlist">
-      <li>
-        <div style="float: left; width: 50%">
-          <label for="name">姓名</label>
-          <input id="name" type="text" class="k-textbox" />
-        </div>
-        <div>
-          <label for="datepicker">生日</label>
-          <input id="datepicker" style="width: 50%" />
-        </div>
-      </li>
-      <li>
-        <section style="display: flex">
-          <div style="margin: 5px">
-            <input type="radio" name="gender" id="radio-male" class="k-radio" checked="checked">
+  <body>
+    <div class="form-section">
+      <ul class="fieldlist">
+        <li>
+          <div class="on-left">
+            <label for="name">姓名</label>
+            <input id="name" type="text" class="k-textbox" />
+          </div>
+          <div class="on-right">
+            <label for="datepicker">生日</label>
+            <input id="datepicker" />
+          </div>
+        </li>
+        <li>
+          <div class="on-radio-left">
+            <input
+              type="radio"
+              name="gender"
+              id="radio-male"
+              class="k-radio"
+              checked="checked"
+            />
             <label class="k-radio-label" for="radio-male">男性</label>
           </div>
-          <div style="margin: 5px">
-            <input type="radio" name="gender" id="radio-female" class="k-radio">
+          <div class="on-radio-right">
+            <input
+              type="radio"
+              name="gender"
+              id="radio-female"
+              class="k-radio"
+            />
             <label class="k-radio-label" for="radio-female">女性</label>
           </div>
-        </section>
-      </li>
-      <li>
-        <label for="intrest">最高學歷</label>
-        <input id="intrest" style="width: 100%;" />
-      </li>
-      <li>
-        <label for="daterangepicker">就學期間</label>
-        <div id="daterangepicker" title="daterangepicker" style="width: 100%"></div>
-      </li>
-      <li>
-        <label for="cellphone">連絡電話</label>
-        <input id="cellphone" type="text" style="width: 100%;" />
-      </li>
-      <li>
-        <div style="display: inline-flex">
-          <div style="width: 50%">
+        </li>
+        <li>
+          <label for="intrest">最高學歷</label>
+          <input id="intrest" style="width: 100%;" />
+        </li>
+        <li>
+          <label for="daterangepicker">就學期間</label>
+          <div
+            id="daterangepicker"
+            title="daterangepicker"
+            style="width: 100%"
+          ></div>
+        </li>
+        <li>
+          <label for="cellphone">連絡電話</label>
+          <input id="cellphone" type="text" style="width: 100%;" />
+        </li>
+        <li>
+          <div class="on-left">
             <label for="address-city">城市</label>
             <input id="address-city" />
           </div>
-
-          <div style="width: 50%; margin-left: 5px;">
+          <div class="on-right">
             <label for="address-unit">鄉鎮</label>
             <input id="address-unit" />
           </div>
+          <!-- <div style="display: inline-flex">
+            <div style="width: 50%">
+              <label for="address-city">城市</label>
+              <input id="address-city" />
+            </div>
 
-        </div>
-        <label for="address-other">街道地址</label>
-        <input id="address-other" class="k-textbox" style="width: 100%;" />
-      </li>
-      <li>
-        <label for="email">電子郵件(帳號)</label>
-        <input id="email" type="text" class="k-textbox" style="width: 100%;" />
-      </li>
-      <li>
-        <label for="password-setting">密碼設定</label>
-        <input id="password-setting" type="password" class="k-textbox" style="width: 100%;" />
-      </li>
-      <li>
-        <form method="post" action="/kendo-ui/upload/submit">
-          <div class="demo-section k-content">
-            <label>照片上傳</label>
-            <input name="files" id="files" type="file" aria-label="files" />
-            <p style="padding-top: 1em; text-align: right">
-              <button type="submit" class="k-button k-primary">上傳</button>
-            </p>
-          </div>
-        </form>
-      </li>
-      <li>
-        開啟訂閱通知 <input id="notification-switch" aria-label="Notification" />
-      </li>
-      <li>
-        <span id="staticNotification"></span>
-        <button id="confirm-button" class="k-primary">確定(點我看看)</button>
-        <button id="cancel-button">取消</button>
-      </li>
-      <li>
-        <div id="appendto"></div>
-      </li>
-    </ul>
-</body>
-
+            <div style="width: 50%; margin-left: 5px;">
+              <label for="address-unit">鄉鎮</label>
+              <input id="address-unit" />
+            </div>
+          </div> -->
+          <label for="address-other">街道地址</label>
+          <input id="address-other" class="k-textbox" style="width: 100%;" />
+        </li>
+        <li>
+          <label for="email">電子郵件(帳號)</label>
+          <input
+            id="email"
+            type="text"
+            class="k-textbox"
+            style="width: 100%;"
+          />
+        </li>
+        <li>
+          <label for="password-setting">密碼設定</label>
+          <input
+            id="password-setting"
+            type="password"
+            class="k-textbox"
+            style="width: 100%;"
+          />
+        </li>
+        <li>
+          <form method="post" action="/kendo-ui/upload/submit">
+            <div class="demo-section k-content">
+              <label>照片上傳</label>
+              <input name="files" id="files" type="file" aria-label="files" />
+              <p style="padding-top: 1em; text-align: right">
+                <button type="submit" class="k-button k-primary">上傳</button>
+              </p>
+            </div>
+          </form>
+        </li>
+        <li>
+          開啟訂閱通知
+          <input id="notification-switch" aria-label="Notification" />
+        </li>
+        <li>
+          <span id="staticNotification"></span>
+          <button id="confirm-button" class="k-primary">確定(點我看看)</button>
+          <button id="cancel-button">取消</button>
+        </li>
+        <li>
+          <div id="appendto"></div>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
