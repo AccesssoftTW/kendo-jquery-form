@@ -15,11 +15,24 @@ $(document).ready(function () {
     { parentId: 3, text: "仁德區", value: "8" },
     { parentId: 3, text: "新營區", value: "9" }
   ];
+  var intrest = [
+    {
+      text: "大學", expanded: true, items: [
+        { text: "四技" },
+        { text: "二專" },
+      ]
+    },
+    {
+      text: "高中", items: [
+        { text: "一般高中" },
+        { text: "高職" },
+      ]
+    }
+  ]
   $("#address-city").kendoDropDownList({
     dataTextField: "text",
     dataValueField: "parentId",
     dataSource: city
-    // change: onChange
   });
   $("#address-unit").kendoDropDownList({
     cascadeFrom: "address-city",
@@ -45,20 +58,7 @@ $(document).ready(function () {
   $("#intrest").kendoDropDownTree({
     placeholder: "Select ...",
     height: "auto",
-    dataSource: [
-      {
-        text: "大學", expanded: true, items: [
-          { text: "四技" },
-          { text: "二專" },
-        ]
-      },
-      {
-        text: "高中", items: [
-          { text: "一般高中" },
-          { text: "高職" },
-        ]
-      }
-    ]
+    dataSource: intrest
   });
 
   $("#files").kendoUpload();
