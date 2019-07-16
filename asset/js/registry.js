@@ -28,7 +28,7 @@ $(document).ready(function () {
     dataSource: unit
   });
   $("#cellphone").kendoMaskedTextBox({
-    mask: "00-0000-0000"
+    mask: "0000-000000"
   });
   $("#datepicker").kendoDatePicker();
   // $("#confirm-button").kendoButton({
