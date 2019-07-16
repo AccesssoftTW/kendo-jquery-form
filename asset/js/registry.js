@@ -31,9 +31,9 @@ $(document).ready(function () {
     mask: "0000-000000"
   });
   $("#datepicker").kendoDatePicker();
-  // $("#confirm-button").kendoButton({
-  //   icon: "check"
-  // });
+  $("#confirm-button").kendoButton({
+    icon: "check"
+  });
   $("#cancel-button").kendoButton({
     icon: "close"
   });
@@ -67,7 +67,7 @@ $(document).ready(function () {
     appendTo: "#appendto"
   }).data("kendoNotification");
 
-  $("#showStaticNotification").click(function () {
+  $("#confirm-button").click(function () {
     var d = new Date();
     staticNotification.show("成功", "success");
     var container = $(staticNotification.options.appendTo);
