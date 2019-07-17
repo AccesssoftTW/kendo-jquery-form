@@ -68,7 +68,6 @@ $(document).ready(function () {
   }).data("kendoNotification");
 
   $("#confirm-button").click(function () {
-    var d = new Date();
     staticNotification.show("成功", "success");
     var container = $(staticNotification.options.appendTo);
     container.scrollTop(container[0].scrollHeight);
